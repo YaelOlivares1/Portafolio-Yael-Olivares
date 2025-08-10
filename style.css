@@ -760,22 +760,22 @@ header{
 /*-------------------------------------InicianTranciones--------------------------*/
 /*Desenfoque*/
 .autoBlur{
-    -webkit-animation: autoBlurAnimation linear both;
+    animation: autoBlurAnimation linear both;
     animation-timeline: view();
 }
 @-webkit-keyframes autoBlurAnimation{
     0%{
-        -webkit-filter: blur(40px);
+        filter: blur(40px);
     }
     40%,60%{
-        -webkit-filter: blur(0);
+        filter: blur(0);
         -webkit-transform: translateY(0px);
-        -webkit-opacity: 1;
+        opacity: 1;
     }
     100%{
-        -webkit-filter: blur(40px);
+        filter: blur(40px);
         -webkit-transform: translateY(-200px);
-        -webkit-opacity: 0;
+        opacity: 0;
     }
 }
 
