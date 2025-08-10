@@ -763,7 +763,7 @@ header{
     animation: autoBlurAnimation linear both;
     animation-timeline: view();
 }
-@keyframes autoBlurAnimation{
+@-webkit-keyframes autoBlurAnimation{
     0%{
         filter: blur(40px);
     }
@@ -786,7 +786,7 @@ header{
     
 }
 
-@keyframes autoPantallaAnimacion{
+@-webkit-keyframes autoPantallaAnimacion{
     to{
         width: 90%;
         height: 100vh;
@@ -801,7 +801,7 @@ header{
     animation: autoDesplazmientoAnimacion both;
     animation-timeline: view(70% 5%);
 }
-@keyframes autoDesplazmientoAnimacion{
+@-webkit-keyframes autoDesplazmientoAnimacion{
     from{
         opacity: 0;
         transform: translateY(200px) scale(0.3);
