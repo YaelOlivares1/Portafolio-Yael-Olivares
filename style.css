@@ -840,13 +840,21 @@ header{
         left: 5%;
     }
     .hero-section h1{
-        font-size: 90px;
+        font-size: 50px;
+    }
+
+    .hero-section h2{
+        font-size: 20px;
+    }
+
+    .hero-section p{
+        font-size: 15px;
     }
     .about-section{
         margin: 0;
     }
     .about-section h1, .fuera{
-        font-size: 50px;
+        font-size: 40px;
     }
     .fuera{
         margin-bottom: -100px;
@@ -886,18 +894,18 @@ header{
     }
 
     .PHOTOSHOP, .ILLUSTRATOR, .InDesign{
-        width: 250px;
+        width: 130px;
         height: 40px;
-        margin-right: 20px;
+        margin-right: 5px;
         
     }
     .imgPhotoshop, .imgILLUSTRATOR, .imgInDesign{
-        width: 30px;
-        padding-right: 5px;
+        width: 25px;
+        padding-right: 4px;
     }
 
     .PREMIERE, .AFTER{
-        width: 180px;
+        width: 160px;
         height: 40px;
         margin-right: 20px;
         
@@ -973,8 +981,5 @@ header{
         transition: all .50s ease;
         background-color: #4b4b4b5b;
         backdrop-filter: blur(10px);
-    }
-    .bx-x{
-        
     }
 }
