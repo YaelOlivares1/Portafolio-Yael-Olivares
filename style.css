@@ -760,7 +760,7 @@ header{
 /*-------------------------------------InicianTranciones--------------------------*/
 /*Desenfoque*/
 .autoBlur{
-    animation: autoBlurAnimation linear both;
+    -webkit-animation: autoBlurAnimation linear both;
     animation-timeline: view();
 }
 @-webkit-keyframes autoBlurAnimation{
