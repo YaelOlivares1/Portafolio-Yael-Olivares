@@ -1,0 +1,980 @@
+body{
+    margin: 0;
+    padding: 0;
+    background-color: black;
+    scroll-behavior: smooth;
+}
+
+/*-----------------------nav-------------------------------*/
+#menu-icon{
+    font-size: 35px;
+    color: var(--text-color);
+    cursor: pointer;
+    z-index: 999;
+    justify-content: center;
+    align-items: center;
+    display:none;
+    margin-left: 15px;
+}
+
+
+.head-right a{
+    font-family: "Montserrat", sans-serif;
+    font-style: normal;
+    font-weight: 800;
+}
+
+.container{
+    font-family: Arial, Helvetica, sans-serif;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+}
+
+header{
+    position: absolute;
+    top: 0;
+    right: 0;
+    left: 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px 40px;
+    z-index: 999;
+    background-color: #4b4b4b5b;
+    backdrop-filter: blur(10px);
+}
+
+.head-left{
+    display: flex;
+    align-items: center;
+}
+
+.head-left img{
+    width: 40px;
+    height: 40px;
+    margin-right: 20px;
+}
+
+.head-left button{
+    border: none;
+    padding:  10px 30px;
+    border-radius: 20px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.head-left button:hover{
+    opacity: 0.7;
+}
+
+.head-right{
+    display: flex;
+}
+
+.head-right a{
+    text-decoration: none;
+    padding-left: 25px;
+    color: white;
+    font-size: 15px;
+}
+
+.hero-section{
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    overflow: hidden;
+}
+/*-----------------------------------------------------------------------------------------*/
+/*Para que se pueda ver en cualquier tamaño de pantalla*/
+.hero-vid{
+    width: 100%;
+    height: 100%;
+    position: relative;
+}
+
+.hero-video{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+/*-----------------------------------------------------------------------------------------*/
+
+.hero-info{
+    z-index: 1;
+    position: absolute;
+    top:80px;
+    left: 50px;
+}
+
+.hero-info h1{
+    font-size: 120px;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    font-weight: 400;
+    max-width: 680px;
+    font-style: normal;
+    letter-spacing: 0;
+    margin-top: 30px;
+    margin-bottom: -25px;
+    
+}
+.hero-info h2{
+    font-size: 30px;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    letter-spacing: 2px;
+    margin-bottom: 30px;
+}
+
+.hero-info p{
+    color:white;
+    font-family: "Montserrat", sans-serif;
+    font-style: normal;
+    font-weight: 350;
+    max-width: 550px;
+    text-align:left;
+    line-height: 25px;
+    
+}
+
+.about-section{
+    width: 100%;
+    height: 100%;
+    margin-top: 200px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    color: white;
+}
+
+.image-box{
+    width: 360px;
+    height: 510px;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50px;
+}
+
+.image-box img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.about-section p{
+    font-size: 30px;
+    font-family: "Montserrat", sans-serif;
+    font-style: normal;
+    font-weight: 350;
+    
+}
+/*Animacion de color en letras---------------------------------------------------------------------------------------------------------------------*/
+.about-section h1{
+    font-size: 100px;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    font-weight: 900;
+    font-style: normal;
+    letter-spacing: 2px;
+    max-width: 1150px;
+    text-align: center;
+    margin: 25px 0;
+    text-transform: uppercase;
+    background: linear-gradient(to right, #2A1AD8, #4E26E2, #7231EC, #953DF5, #0099ff, #B948FF, #2A1AD8);
+    background-size: 200%;
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    animation: animate-gradient 2.5s linear infinite;  
+}
+
+.info-section h1, .fuera{
+    font-size: 100px;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    font-weight: 900;
+    font-style: normal;
+    letter-spacing: 2px;
+    max-width: 1150px;
+    text-align: center;
+    margin: 25px 0;
+    text-transform: uppercase;
+    background: linear-gradient(to right, #2A1AD8, #4E26E2, #7231EC, #953DF5, #0099ff, #B948FF, #2A1AD8);
+    background-size: 200%;
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    animation: animate-gradient 2.5s linear infinite;  
+}
+@keyframes animate-gradient{
+    to{
+        background-position: 200%;
+    }
+}
+/*---------------------------------------------------------------------------------------------------------------------*/
+
+.about-section h2{
+    font-size: 30px;
+    font-family: "Montserrat", sans-serif;
+    font-style: normal;
+    font-weight: 700;
+    margin-top: -60px;
+    margin-bottom: 0px;
+    margin-top: -34px;
+}
+
+.about-section h3{
+    font-size: 20px;
+    font-family: "Montserrat", sans-serif;
+    font-style: normal;
+    font-weight: 350;
+    margin-top: 5px;
+    color: white;
+    max-width: 425px;
+    text-align: center;
+    line-height: 25px;
+    margin-bottom: 35px;
+    max-width: 500px;
+}
+
+.about-section button.buttonSig{
+    font-size: 20px;
+    font-family: "Montserrat", sans-serif;
+    font-style: normal;
+    font-weight: 800;
+    color: white;
+    position: absolute;
+    border: 2px solid rgb(255, 255, 255);
+    border-radius: 50px;
+    margin-top: 505px;
+    background: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 10px 20px;
+}
+
+.about-section button.buttonSig:hover{
+    background-color: #27262c;
+    transition: 0.5s;
+}
+
+/*Iconos---------------------------------------------*/
+.flex-container{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 100px;
+}
+.flex-container p{
+    font-size: 25px;
+    font-family: "Montserrat", sans-serif;
+    font-style: normal;
+    font-weight: 900;
+    color: white; 
+}
+.Figma{
+    width: 190px;
+    height: 50px;
+    background-color:dimgray;
+    border-radius: 15px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-right: 35px;
+    
+}
+.imgFigma{
+    width: 25px;
+    padding-right: 17px;
+}
+
+.HTML{
+    width: 190px;
+    height: 50px;
+    background-color:dimgray;
+    border-radius: 15px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-right: 35px;
+}
+
+.imgHTML{
+    width: 30px;
+    padding-right: 17px;
+}
+
+.CSS{
+    width: 190px;
+    height: 50px;
+    background-color:dimgray;
+    border-radius: 15px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+}
+
+.imgCSS{
+    width: 33px;
+    padding-right: 17px;
+}
+
+.JS{
+    width: 190px;
+    height: 50px;
+    background-color:dimgray;
+    border-radius: 15px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    float: right;    
+}
+
+.imgJS{
+    width: 35px;
+    padding-right: 17px;
+    
+}
+
+.PHOTOSHOP{
+    width: 235px;
+    height: 50px;
+    background-color:dimgray;
+    border-radius: 15px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    float: right; 
+    margin-right: 35px;
+    margin-top: 40px;
+}
+
+.imgPhotoshop{
+    width: 37.9px;
+    padding-right: 17px;
+}
+
+.ILLUSTRATOR{
+    width: 235px;
+    height: 50px;
+    background-color:dimgray;
+    border-radius: 15px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    float: right;
+    margin-right: 35px;
+    margin-top: 40px;
+}
+
+.imgILLUSTRATOR{
+    width: 35px;
+    padding-right: 17px;
+}
+
+.InDesign{
+    width: 235px;
+    height: 50px;
+    background-color:dimgray;
+    border-radius: 15px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    float: right;   
+    margin-top: 40px;
+}
+
+.imgInDesign{
+    width: 35px;
+    padding-right: 17px;
+}
+
+.PREMIERE{
+    width: 250px;
+    height: 50px;
+    background-color:dimgray;
+    border-radius: 15px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    float: right;   
+    margin-top: 50px;
+    margin-right: 35px;
+}
+
+.imgPREMIERE{
+    width: 35px;
+    padding-right: 17px;
+}
+
+.AFTER{
+    width: 250px;
+    height: 50px;
+    background-color:dimgray;
+    border-radius: 15px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    float: right;  
+    margin-top: 50px; 
+}
+
+.imgAFTER{
+    width: 35px;
+    padding-right: 17px;
+}
+/*----------------------------------------------------Termina icnos------------------------------------*/
+.info-section{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    position: relative;
+    width: 80%;
+    margin-top: 100px;
+    
+}
+
+.info-section h3{
+    margin-bottom: 0;
+}
+
+.info-cards{
+    display: grid;
+    grid-template-columns: auto auto;
+    gap: 20px;
+    width: 100%;
+    height: 100%;
+    margin-top: 30px;
+}
+
+.card{
+    position: relative;
+    width: auto;
+    height: 40vh;
+    overflow: hidden;
+    border: 1px solid gray;
+    border-radius: 20px;
+    transition: 0.5s;
+    opacity: 85%;
+}
+
+.card h1{
+    position: absolute;
+    margin: 0;
+    top: 10px;
+    left: 5%;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    letter-spacing: 2px;
+    font-size: 60px;
+    z-index: 1;
+    background: linear-gradient(to right, #4acfee, #53f8c9, #02d79a, #6070fd, #2a46ff, #0099ff, #4acfee);
+    background-size: 200%;
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    animation: animate-gradient 2.5s linear infinite;
+    max-width: 600px;
+}
+
+.card p{
+    font-family: "Montserrat", sans-serif;
+    font-style: normal;
+    font-weight: 355;
+    position: absolute;
+    top: 80px;
+    left: 5%;
+    z-index: 1;
+    max-width: 300px;
+    color: lightgray;
+}
+
+.card img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.card:hover{
+    box-shadow: 0 0 15px white;
+}
+
+.card:nth-child(1){
+    grid-column: span 2;   
+}
+
+.card:nth-child(2){
+    grid-row: span 2;
+    height: 83vh;
+}
+
+.card:nth-child(7){
+    grid-row: span 2;
+    height: 83vh;
+}
+.card:nth-child(8){
+    grid-row: span 2;
+    height: 83vh;
+}
+.card:nth-child(10){
+    grid-row: span 2;
+    height: 87vh;
+}
+
+.card:nth-child(11){
+    grid-row: span 2;
+    height: 135vh;
+}
+
+.card:nth-child(12){
+    grid-row: span 1;
+    height: 88vh;
+}
+
+.card:nth-child(13){
+    grid-row: span 1;
+    height: 100vh;
+}
+
+.card:nth-child(14){
+    grid-row: span 1;
+    height: 100vh;
+}
+
+.card p.color{
+    color: rgb(255, 255, 255);
+}
+/*----------------------------------TerminaSecciondeLasCartas---------------------------*/
+.contact-section{
+    position: relative;
+    width: 100%;
+    margin-top: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 100%;
+    margin-bottom: 100px;
+
+}
+
+.contact-section .img1{
+    position: absolute;
+    top: 20%;
+    right: -55px;
+    height: 250px;
+    clip-path: polygon(45% 0, 80% 0, 60% 100%, 20% 100%);
+}
+
+.contact-section .img2{
+    position: absolute;
+    left: 15px;
+    top: 10px;
+    height: 200px;
+    clip-path: polygon(52% 5%, 100% 38%, 82% 100%, 34% 93%, 0% 38%);
+}
+
+.contact-section .img3{
+    position: absolute;
+    left: 1%;
+    bottom: 5%;
+    height: 250px;
+    width: 250px;
+    clip-path: polygon(35% 6%, 75% 0%, 100% 50%, 75% 100%, 36% 95%, 8% 49%);
+}
+/*------------------------------VideoDemoReel----------------------------------------*/
+.reel-video{
+    width: 1080px;
+    border-radius: 10px;
+}
+/*----------------------------------BotonesContacto---------------------------*/
+.footer{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #161616;
+    backdrop-filter: blur(10px);
+    height: 100px;
+}
+
+.footer ul{
+    display: flex;
+    list-style: none;
+}
+
+.footer a{
+    display: flex;
+    position: relative;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+    color: white;
+    padding: 15px 15px 15px;
+    border-radius: 50px;
+    border: 2px solid rgb(163, 54, 252);
+    margin: 0 10px;
+}
+
+.footer a:hover{
+    background-color: rgb(163, 54, 252);
+    transition: 0.5s;
+}
+/*----------------------------------------------------FinDelFooter-----------------------------------*/
+.Edicion{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    position: relative;
+    width: 80%;
+    margin-top: 100px;
+    
+}
+
+.Edicion h3{
+    margin-bottom: 0;
+}
+
+.info-cardsNew{
+    display: grid;
+    grid-template-columns: auto auto;
+    gap: 20px;
+    width: 100%;
+    height: 100%;
+    margin-top: 30px;
+}
+
+.cardNew{
+    position: relative;
+    width: auto;
+    height: 40vh;
+    overflow: hidden;
+    border: 1px solid gray;
+    border-radius: 20px;
+    transition: 0.5s;
+    opacity: 85%;
+}
+
+.cardNew h1{
+    position: absolute;
+    margin: 0;
+    top: 10px;
+    left: 5%;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    letter-spacing: 2px;
+    font-size: 60px;
+    z-index: 1;
+    background: linear-gradient(to right, #c713c7, #4f0dca, #CC0000, #6334e6, #FF3333, #ae26d8, #c713c7);
+    background-size: 200%;
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    animation: animate-gradient 2.5s linear infinite;
+    max-width: 1000px;
+}
+
+.cardNew p{
+    font-family: "Montserrat", sans-serif;
+    font-style: normal;
+    font-weight: 355;
+    position: absolute;
+    top: 80px;
+    left: 5%;
+    z-index: 1;
+    max-width: 300px;
+    color: rgb(255, 255, 255);
+}
+
+.cardNew p.Espacio{
+    font-family: "Montserrat", sans-serif;
+    font-style: normal;
+    font-weight: 355;
+    position: absolute;
+    top: 150px;
+    left: 5%;
+    z-index: 1;
+    max-width: 300px;
+    color: rgb(255, 255, 255);
+}
+
+.cardNew video{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.cardNew:hover{
+    box-shadow: 0 0 15px white;
+}
+
+.cardNew:nth-child(1){
+    grid-column: span 2;
+    grid-row: span 2;
+    height: 100vh;   
+}
+
+.cardNew:nth-child(2){
+    grid-row: span 2;
+    height: 130vh;
+}
+
+.cardNew:nth-child(3){
+    grid-row: span 2;
+    height: 130vh;
+}
+
+.cardNew:nth-child(4){
+    grid-row: span 2;
+    height: 130vh;
+}
+
+.cardNew:nth-child(5){
+    grid-row: span 2;
+    height: 130vh;
+}
+
+.cardNew:nth-child(6){
+    grid-row: span 2;
+    height: 85vh;
+}
+
+.cardNew:nth-child(7){
+    grid-row: span 2;
+    height: 85vh;
+}
+.cardNew:nth-child(8){
+    grid-column: span 2;
+    grid-row: span 2;
+    height: 23vh;
+}
+
+.cardNew p.color{
+    color: rgb(255, 255, 255);
+}
+
+/*-------------------------------------TerminaCartasDos---------------------------------------*/
+/*-------------------------------------InicianTranciones--------------------------*/
+/*Desenfoque*/
+.autoBlur{
+    animation: autoBlurAnimation linear both;
+    animation-timeline: view();
+}
+@keyframes autoBlurAnimation{
+    0%{
+        filter: blur(40px);
+    }
+    40%,60%{
+        filter: blur(0);
+        transform: translateY(0px);
+        opacity: 1;
+    }
+    100%{
+        filter: blur(40px);
+        transform: translateY(-200px);
+        opacity: 0;
+    }
+}
+
+/*PantallaCompletaAnimacion*/
+.autoPantalla{
+    animation: autoPantallaAnimacion both;
+    animation-timeline: view(70% 65%);
+    
+}
+
+@keyframes autoPantallaAnimacion{
+    to{
+        width: 90%;
+        height: 100vh;
+        border-radius: 0;
+        margin-bottom: 100px;
+        border-radius: 15px;
+    }
+}
+
+/*AutoDesplazamiento*/
+.autoDesplazamiento{
+    animation: autoDesplazmientoAnimacion both;
+    animation-timeline: view(70% 5%);
+}
+@keyframes autoDesplazmientoAnimacion{
+    from{
+        opacity: 0;
+        transform: translateY(200px) scale(0.3);
+    }to{
+        opacity: 1;
+        transform: translateY(0) scale(1);
+    }
+}
+/*--------------------------------TerminanAnimaciones de transicion----------------------*/
+
+/*---------------------------------Diseño responsivo------------------------*/
+@media screen and (max-width: 650px){
+    header{
+        padding: 0 10px;
+        
+    }
+    .head-left button{
+        display:none;
+    }
+    .head-right a{
+        font-size: 9px;
+        padding: 0 9px;
+        display: block;
+        margin: 15px 0;
+        transition: all .50s ease;
+        margin-bottom: -35px; 
+    }
+
+    .head-right.open{
+        right: 2%;
+        
+    }
+    
+    
+    .hero-info{
+        left: 5%;
+    }
+    .hero-section h1{
+        font-size: 90px;
+    }
+    .about-section{
+        margin: 0;
+    }
+    .about-section h1, .fuera{
+        font-size: 50px;
+    }
+    .fuera{
+        margin-bottom: -100px;
+    }
+    .image-box{
+        width: 300px;
+        height: 500px;
+    }
+    .about-section h3, .about-section h2{
+        max-width: 325px;
+        text-align: center;
+       
+    }
+    .about-section button.buttonSig{
+        margin-top: 550px;
+        margin-bottom: 100px;
+    }
+
+    .flex-container{
+        width: 99%;
+        height: 80%;
+        margin-bottom: 80px;
+        
+        
+    }
+    .flex-container p{
+        font-size: 15px;
+    }
+    .Figma, .HTML, .CSS{
+        width: 120px;
+        height: 40px;
+        margin-right: 10px;
+    }
+    .imgFigma, .imgHTML, .imgCSS{
+        width: 20px;
+        padding-right: 10px;
+    }
+
+    .PHOTOSHOP, .ILLUSTRATOR, .InDesign{
+        width: 250px;
+        height: 40px;
+        margin-right: 20px;
+        
+    }
+    .imgPhotoshop, .imgILLUSTRATOR, .imgInDesign{
+        width: 30px;
+        padding-right: 5px;
+    }
+
+    .PREMIERE, .AFTER{
+        width: 180px;
+        height: 40px;
+        margin-right: 20px;
+        
+    }
+    .imgPREMIERE, .imgAFTER{
+        width: 30px;
+        padding-right: 5px;
+    }
+    .contact-section .img1{
+        width: 120px;
+        height: 100px;
+        right: -0px;
+        top: 20px;
+    }
+    .contact-section .img2{
+        top: -100px;
+        left: -40px;
+        width: 140px;
+        height: 140px;
+    }
+    .contact-section .img3{
+        left: -40px;
+        bottom: 0;
+        width: 105px;
+        height: 110px;
+    }
+    .contact-section video{
+        width: 420px;
+    }
+    
+    .footer p{
+        display: none;
+    }
+    .footer ul{
+        margin-left: 70px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin-left: -40px;
+    }
+    .card h1, .cardNew h1{
+        
+        font-size: 19px;
+        max-width: 400px;
+    }
+    .cardNew p, .card p{
+        
+        margin-top: -35px;
+        max-width: 700px;
+        
+    }
+
+    .cardNew p.Espacio{
+        margin-top: -80px;
+    }
+
+    #menu-icon{
+        display: block;
+        margin-left: 0;
+        
+    }
+
+    .head-right{
+        position: absolute;
+        top: 140%;
+        right: -22%;
+        width: 100px;
+        height: 43vh;
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        border-radius: 5px;
+        transition: all .50s ease;
+        background-color: #4b4b4b5b;
+        backdrop-filter: blur(10px);
+    }
+    .bx-x{
+        
+    }
+}
