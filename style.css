@@ -587,10 +587,7 @@ header{
     clip-path: polygon(35% 6%, 75% 0%, 100% 50%, 75% 100%, 36% 95%, 8% 49%);
 }
 /*------------------------------VideoDemoReel----------------------------------------*/
-.reel-video{
-    position: relative;
-    display: flex;
-    flex-direction: column;
+.contact-section video{
     width: 1080px;
     border-radius: 10px;
 }
