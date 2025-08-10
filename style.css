@@ -588,6 +588,9 @@ header{
 }
 /*------------------------------VideoDemoReel----------------------------------------*/
 .reel-video{
+    position: relative;
+    display: flex;
+    flex-direction: column;
     width: 1080px;
     border-radius: 10px;
 }
