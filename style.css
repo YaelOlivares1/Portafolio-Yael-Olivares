@@ -765,16 +765,32 @@ header{
 }
 @-webkit-keyframes autoBlurAnimation{
     0%{
-        filter: blur(40px);
+        -webkit-backdrop-filter: blur(40px);
     }
     40%,60%{
-        filter: blur(0);
+        -webkit-backdrop-filter: blur(0);
         -webkit-transform: translateY(0px);
         opacity: 1;
     }
     100%{
-        filter: blur(40px);
+        -webkit-backdrop-filter: blur(40px);
         -webkit-transform: translateY(-200px);
+        opacity: 0;
+    }
+}
+
+@keyframes autoBlurAnimation{
+    0%{
+        filter: blur(40px);
+    }
+    40%,60%{
+        filter: blur(0);
+        transform: translateY(0px);
+        opacity: 1;
+    }
+    100%{
+        filter: blur(40px);
+        transform: translateY(-200px);
         opacity: 0;
     }
 }
