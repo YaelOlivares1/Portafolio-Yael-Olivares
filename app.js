@@ -40,49 +40,15 @@ ButtonSig3.addEventListener('click', function(){
     }
 })
 
-let menu=document.querySelector('#menu-icon');
-let navbar=document.querySelector('.head-right');
+let menuList=document.getElementById('menuList');
+menuList.style.maxHeight="-50px";
 
-menu.onclick=()=>{
-    menu.classList.toggle('bx-x');
-    navbar.classList.toggle('open');
+function toggleMenu(){
+    if(menuList.style.maxHeight=="0px"){
+        menuList.style.maxHeight="300px";
+    }else{
+        menuList.style.maxHeight="0px";
+    }
 }
 
-document.addEventListener("DOMContentLoaded", function () {
-    const supportsTimeline = CSS.supports("animation-timeline: view()");
-    if (supportsTimeline) return; // Chrome/Edge usan animación nativa
 
-    const elements = document.querySelectorAll('.autoBlurContent');
-
-    function updateAnimations() {
-        elements.forEach(el => {
-            const rect = el.getBoundingClientRect();
-            const windowHeight = window.innerHeight;
-
-            let progress = (windowHeight - rect.top) / (windowHeight + rect.height);
-            progress = Math.max(0, Math.min(progress, 1));
-
-            if (progress < 0.4) {
-                const blurValue = 40 - (progress / 0.4) * 40;
-                el.style.filter = `blur(${blurValue}px)`;
-                el.style.transform = `translateY(0px)`;
-                el.style.opacity = progress / 0.4;
-            } else if (progress < 0.6) {
-                el.style.filter = `blur(0px)`;
-                el.style.transform = `translateY(0px)`;
-                el.style.opacity = 1;
-            } else {
-                const endProgress = (progress - 0.6) / 0.4;
-                const blurValue = endProgress * 40;
-                const translateY = -200 * endProgress;
-                el.style.filter = `blur(${blurValue}px)`;
-                el.style.transform = `translateY(${translateY}px)`;
-                el.style.opacity = 1 - endProgress;
-            }
-        });
-    }
-
-    window.addEventListener('scroll', updateAnimations, { passive: true });
-    window.addEventListener('resize', updateAnimations);
-    updateAnimations();
-});

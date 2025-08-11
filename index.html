@@ -16,7 +16,7 @@
             <div class="head-left">
                 <img src="imagenes/LOGO%20YAEL.png" alt="logo">
             </div>
-            <div class="head-right">
+            <div class="head-right" id="menuList">
                 <p><a href="#Galeria">DISEÑO UI/UX Y PROTOTIPOS</a></p>
                 <p><a href="#diseño">DISEÑO GRÁFICO Y PUBLICITARIO</a></p>
                 <p><a href="#Edicion">EDICIÓN DE VIDEO Y MOTION GRAPHICS</a></p>
@@ -24,7 +24,9 @@
                 <p><a href="#Contacto">CONTACTO</a></p>
                 
             </div>
-            <div class="bx bx-menu bx-md" id="menu-icon"></div>
+            <div class="menu-icon">
+                <i class="bx bx-menu bx-md" onclick="toggleMenu()"></i>
+            </div>
         </header>
         <section class="hero-section autoBlur">
             <div class="hero-vid">
@@ -44,7 +46,7 @@
         </section>
         <section class="about-section" id="Galeria">
             <p>Bienvenido a la Galería</p>
-            <div class="autoBlur">
+            <div>
                 <h1>DISEÑO UI/UX Y PROTOTIPOS</h1>
             </div>
             <div class="image-box autoPantalla">
@@ -236,11 +238,11 @@
                         <source src="videos/marisola.mp4" type="video/mp4">
                     </video>
                 </div>
-                <div class="cardNew autoBlur">
+                <div class="cardNew autoDesplazamiento">
                     <h1>CORTOMETRAJE</h1>
                     <p>Producción y postproducción de cortometraje de género terrorífico.</p>
                 </div>
-                <div class="cardNew autoBlur">
+                <div class="cardNew autoDesplazamiento">
                     <video loop autoplay muted plays-inline>
                         <source src="videos/corto.mp4" type="video/mp4">
                     </video>
@@ -259,12 +261,10 @@
                 </div>  
             </div>
         <section class="contact-section" id="Reel">
-            <div class="autoBlur">
-                <div class="autoBlurContent">
-                    <video controls playsinline>
-                        <source src="videos/DemoReel.mp4#t=2.0" type="video/mp4">
-                    </video>
-                </div>   
+            <div>
+                <video controls playsinline>
+                <source src="videos/DemoReel.mp4#t=2.0" type="video/mp4">
+            </video>
             </div>
             
             <img class="img1" src="imagenes/IMAGEN1.jpg" alt="contact-img">
