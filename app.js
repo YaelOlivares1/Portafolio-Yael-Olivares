@@ -49,35 +49,30 @@ menu.onclick=()=>{
 }
 
 document.addEventListener("DOMContentLoaded", function () {
-    // Verifica si el navegador soporta animation-timeline
     const supportsTimeline = CSS.supports("animation-timeline: view()");
-    if (supportsTimeline) return; // Chrome/Edge usan la animación nativa
+    if (supportsTimeline) return; // Chrome/Edge usan animación nativa
 
     const elements = document.querySelectorAll('.autoBlur');
 
-    window.addEventListener('scroll', () => {
+    function updateAnimations() {
         elements.forEach(el => {
             const rect = el.getBoundingClientRect();
             const windowHeight = window.innerHeight;
 
-            // Calcular progreso de visibilidad (0 a 1)
-            let progress = 1 - (rect.top / windowHeight);
-            progress = Math.max(0, Math.min(progress, 1)); // limitar entre 0 y 1
+            // Progreso de visibilidad: 0 cuando el elemento está justo entrando, 1 cuando sale
+            let progress = (windowHeight - rect.top) / (windowHeight + rect.height);
+            progress = Math.max(0, Math.min(progress, 1));
 
-            // Simular los keyframes según el progreso
             if (progress < 0.4) {
-                // Inicio -> blur alto, opacidad baja
                 const blurValue = 40 - (progress / 0.4) * 40;
                 el.style.filter = `blur(${blurValue}px)`;
-                el.style.transform = `translateY(${0}px)`;
+                el.style.transform = `translateY(0px)`;
                 el.style.opacity = progress / 0.4;
             } else if (progress < 0.6) {
-                // Medio -> sin blur, opacidad total
                 el.style.filter = `blur(0px)`;
                 el.style.transform = `translateY(0px)`;
                 el.style.opacity = 1;
             } else {
-                // Final -> volver al blur y mover hacia arriba
                 const endProgress = (progress - 0.6) / 0.4;
                 const blurValue = endProgress * 40;
                 const translateY = -200 * endProgress;
@@ -86,5 +81,9 @@ document.addEventListener("DOMContentLoaded", function () {
                 el.style.opacity = 1 - endProgress;
             }
         });
-    }, { passive: true });
+    }
+
+    window.addEventListener('scroll', updateAnimations, { passive: true });
+    window.addEventListener('resize', updateAnimations);
+    updateAnimations(); // Inicial
 });
