@@ -762,6 +762,7 @@ header{
 .autoBlur{
     animation: autoBlurAnimation linear both;
     animation-timeline: view();
+    will-change: filter, transform, opacity;
 }
 
 @keyframes autoBlurAnimation{
