@@ -52,14 +52,13 @@ document.addEventListener("DOMContentLoaded", function () {
     const supportsTimeline = CSS.supports("animation-timeline: view()");
     if (supportsTimeline) return; // Chrome/Edge usan animación nativa
 
-    const elements = document.querySelectorAll('.autoBlur');
+    const elements = document.querySelectorAll('.autoBlurContent');
 
     function updateAnimations() {
         elements.forEach(el => {
             const rect = el.getBoundingClientRect();
             const windowHeight = window.innerHeight;
 
-            // Progreso de visibilidad: 0 cuando el elemento está justo entrando, 1 cuando sale
             let progress = (windowHeight - rect.top) / (windowHeight + rect.height);
             progress = Math.max(0, Math.min(progress, 1));
 
@@ -85,5 +84,5 @@ document.addEventListener("DOMContentLoaded", function () {
 
     window.addEventListener('scroll', updateAnimations, { passive: true });
     window.addEventListener('resize', updateAnimations);
-    updateAnimations(); // Inicial
+    updateAnimations();
 });
