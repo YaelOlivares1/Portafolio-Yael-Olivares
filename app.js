@@ -1,7 +1,7 @@
 const ButtonSig = document.querySelector('button.buttonSig');
 const img=document.querySelector('img.tam');
 
-const imgLista=['imagenes/web1.jpg', 'imagenes/figma1.png'];
+const imgLista=['imagenes/web1.jpeg', 'imagenes/figma1.png'];
 let index =0;
 ButtonSig.addEventListener('click', function(){
     index +=1

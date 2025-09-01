@@ -285,20 +285,22 @@ header{
     width: 25px;
     padding-right: 17px;
 }
+.Xd p{
+    font-size: 18px;
+}
 .Xd{
-    width: 150px;
+    width: 160px;
     height: 40px;
     background-color:dimgray;
     border-radius: 15px;
     display: flex;
     justify-content: center;
     align-items: center;
-    margin-right: 35px;
     
 }
 .imgXd{
     width: 30px;
-    padding-right: 17px;
+    padding-right: 15px;
 }
 .HTML{
     width: 190px;
@@ -1031,7 +1033,7 @@ header{
 
     .card:nth-child(13){
     grid-column: span 2;
-    height: 13vh;
+    height: 20vh;
     }
 
     .card:nth-child(14){
@@ -1071,7 +1073,7 @@ header{
     }
     .cardNew:nth-child(8){
     grid-row: span 2;
-    height: 12vh;   
+    height: 20vh;   
     }
     .cardNew:nth-child(9){
     grid-column: span 2;
@@ -1086,7 +1088,7 @@ header{
     .cardNew:nth-child(11){
         grid-column: span 2;
     grid-row: span 2;
-    height: 12vh;   
+    height: 20vh;   
     }
     .cardNew:nth-child(12){
         grid-column: span 2;
